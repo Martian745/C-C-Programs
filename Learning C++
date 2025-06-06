@@ -1,0 +1,46 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+/*int main() 
+{
+    int n;
+    cout<<"Enter any no.";
+    cin>>n;
+    while(n>0)
+    {
+        cout<< n <<" " ;
+        --n;
+    }
+
+    return 0;
+}*/
+
+// do while loop 
+/*int main()
+{
+    int i;
+    cout<<"Enter any no.\n";
+    do
+    {
+        cout<<"Enter 0 to Stop\n";
+        cin>>i;
+        cout<<"Your Entered No.is "<<i<<"\n";
+    }while(i!=0);
+}*/
+
+//For Loop
+/*int main()
+{
+    int i,n;
+    cout<<"Enter any Number:";
+    cin>>n;
+    
+    for(i=0;i<n;i++)
+    {
+        cout<<i<<"\n";
+    }
+    cout<<"Kudos .^ You smoked the Enemy :)";
+}*/
+
+//
