@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-/*int main() 
+//while loop
+int main() 
 {
     int n;
     cout<<"Enter any no.";
@@ -14,10 +15,10 @@ using namespace std;
     }
 
     return 0;
-}*/
+}
 
 // do while loop 
-/*int main()
+int main()
 {
     int i;
     cout<<"Enter any no.\n";
@@ -27,10 +28,11 @@ using namespace std;
         cin>>i;
         cout<<"Your Entered No.is "<<i<<"\n";
     }while(i!=0);
-}*/
+
 
 //For Loop
-/*int main()
+
+int main()
 {
     int i,n;
     cout<<"Enter any Number:";
@@ -41,6 +43,83 @@ using namespace std;
         cout<<i<<"\n";
     }
     cout<<"Kudos .^ You smoked the Enemy :)";
-}*/
 
-//
+
+//passing an array to a function
+
+#include <iostream>
+using namespace std;
+
+void printarray(int arr[],int length);
+
+int main()
+{
+    int array1[]={12,13,14,54},l;
+    l=sizeof(array1)/4;
+    printarray(array1,l);
+}
+
+void printarray(int arr[],int length)
+{
+    int i;
+    for(i=0;i<length;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+
+
+
+//Applying reference and dereference operator
+
+#include <iostream> 
+using namespace std; 
+ 
+int main () 
+{ 
+  int firstvalue = 5, secondvalue = 15; 
+  int * p1, * p2; 
+ 
+  p1 = &firstvalue;  // p1 = address of firstvalue 
+  p2 = &secondvalue; // p2 = address of secondvalue 
+  cout<<p1<<" "<<p2<<endl;
+  
+  *p1 = 10;          // value pointed by p1 = 10 
+  *p2 = *p1;  
+  
+  return 0; 
+} 
+
+// Pointer Arithemetics
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char c = 'A';
+    short s = 100;
+    long l = 1000;
+
+    char *mychar = &c;
+    short *myshort = &s;
+    long *mylong = &l;
+
+    // Printing the initial addresses
+    cout << "Initial addresses:" << endl;
+    cout << "mychar: " << static_cast<void*>(mychar) << endl;
+    cout << "myshort: " << myshort << endl;
+    cout << "mylong: " << mylong << endl;
+
+    // Incrementing pointers
+    mychar++;
+    myshort++;
+    mylong++;
+
+    cout << "\nAfter pointer increments:" << endl;
+    cout << "mychar: " << static_cast<void*>(mychar) << endl;
+    cout << "myshort: " << myshort << endl;
+    cout << "mylong: " << mylong << endl;
+
+    return 0;
+}
